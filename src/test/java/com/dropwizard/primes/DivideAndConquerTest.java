@@ -31,7 +31,7 @@ public class DivideAndConquerTest extends TestCase{
 	}
     
     public void test0To100() throws Exception {
-		assertTrue(new DivideAndConquer(0, 100, 100, 4).compute().equals(25));
+		assertTrue(new DivideAndConquer(0, 100, 100, 4).compute().equals(0));
 	}
     
     public void test2To100() throws Exception {
