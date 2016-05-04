@@ -35,13 +35,14 @@ To run, navigate to the app root directory (level containing the prime.yml)
 
     java -jar target/primes-0.0.1-SNAPSHOT.jar server prime.yml
 
-Usage
------
+Usage - MUST BE POSITIVE INTEGERS
+---------------------------------
 
  When the app is running it is accessible on the applicationConnectors port in the format:
 
     http://localhost:9000/IsPrime?start=21474837 Single value validation
     http://localhost:9000/ArePrime?rangestart=1&rangeend=101 Min-max values validation 
+    http://localhost:9000/PrimeThread?rangestart=1&rangeend=101
     Response if of this format
     {"id":1,"isPrime":true,"primeCount":1}
     
