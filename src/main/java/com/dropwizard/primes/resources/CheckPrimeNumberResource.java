@@ -27,7 +27,7 @@ public class CheckPrimeNumberResource {
 
     @GET
     @Timed
-    public PrimeNumber isThisNumberPrime(@QueryParam("start")  @Min(1) @Max(2147483646) int numberToCheck) {  
+    public PrimeNumber isThisNumberPrime(@QueryParam("start")  @Min(1) @Max(2147483647) int numberToCheck) {  
     	    	
     	PrimeNumber primer = new PrimeNumber(counter.incrementAndGet());
     	primer.setIsPrime(new CalculatePrimeNumbers().isPrimeNumber(numberToCheck));  
