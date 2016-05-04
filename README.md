@@ -49,9 +49,17 @@ Usage
 
  The configuration is contained in the prime.yml file.
 ```xml
+# Required for parallelism
 defaultCPUNumber: 4
 
-Change default server ports
+# Required for large numbers which will be 
+# broken into batches and processed
+batchNumber: 100
+
+# This is the number of numbers that can me processed by /ArePrime and /PrimeThread
+rangesSpreadMax: 100000000
+
+# Change default server ports
 server:
   applicationConnectors:
   - type: http
