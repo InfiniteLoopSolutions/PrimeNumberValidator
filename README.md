@@ -132,5 +132,9 @@ NOTES
     TODO -Custom Exception handling. If an excption is thrown then a http 500 error is sent from jersey needs to be improved.
     
     
+    
+Known Issues
+------------
+      can enter 0 for the min value in 
 
 Any problems please do get in touch.
