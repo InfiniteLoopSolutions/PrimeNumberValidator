@@ -32,7 +32,7 @@ public class CheckPrimeNumbersRangeResource {
 
     @GET
     @Timed
-    public PrimeNumber isThisNumberPrime(@QueryParam("rangestart") @Min(0) int rangeStart, @QueryParam("rangeend") int rangeEnd) throws InterruptedException, ExecutionException, InvalidAlgorithmParameterException {        
+    public PrimeNumber isThisNumberPrime(@QueryParam("rangestart") @Min(1) int rangeStart, @QueryParam("rangeend") int rangeEnd) throws InterruptedException, ExecutionException, InvalidAlgorithmParameterException {        
             	    	
     	if(rangeEnd - rangeStart > rangesSpreadMax)
     		throw new InvalidAlgorithmParameterException(THE_RANGE_MUST_BE_LESS_THAN + rangesSpreadMax);
