@@ -33,7 +33,7 @@ Once downloaded to compile.
 
 To run, navigate to the app root directory (level containing the prime.yml)
 
-    java -jar target/primes-0.0.1-SNAPSHOT.jar server prime.yml
+    java -jar target/primes.core-0.0.1-SNAPSHOT.jar server prime.yml
 
 Usage - MUST BE POSITIVE INTEGERS
 ---------------------------------
