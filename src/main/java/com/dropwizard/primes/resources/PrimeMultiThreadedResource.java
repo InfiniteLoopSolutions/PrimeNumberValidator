@@ -4,6 +4,7 @@ import java.security.InvalidAlgorithmParameterException;
 import java.util.concurrent.atomic.AtomicLong;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Max;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -33,7 +34,7 @@ public class PrimeMultiThreadedResource {
 
     @GET
     @Timed
-    public PrimeNumber isThisNumberPrime(@QueryParam("rangestart") @Min(1) int rangeStart, @QueryParam("rangeend") int rangeEnd) throws Exception {        
+    public PrimeNumber isThisNumberPrime(@QueryParam("rangestart") @Min(1) @Max(2147483646) int rangeStart, @QueryParam("rangeend") int rangeEnd) throws Exception {        
             	    	
     	if(rangeEnd - rangeStart > rangesSpreadMax)
     		throw new InvalidAlgorithmParameterException(THE_RANGE_MUST_BE_LESS_THAN + rangesSpreadMax);
