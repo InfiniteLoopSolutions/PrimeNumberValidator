@@ -10,7 +10,7 @@
     </prerequisites>
 
     <groupId>com.dropwizard</groupId>
-    <artifactId>primes</artifactId>
+    <artifactId>primes.core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
