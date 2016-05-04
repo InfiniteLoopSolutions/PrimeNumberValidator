@@ -1,33 +1,37 @@
 # PrimeNumberValidator
-----------------------
+
 
   This is a dropwizard implementation to demonstrate two forms of input, single value and range (min, max). The demonstration is using java 8 and a number of techniques:
 
-  ForkJoinPool
-  IntStream
-  ExecutorService
-  Callables
-  And just raw number crunching!
+  ForkJoinPool,
+  IntStream,
+  ExecutorService,
+  Callables,
+  and just raw number crunching!
 
 Maintainer
 ------------
 
   [Jude Conroy](https://github.com/Jude-Conroy)
 
+
 Documentation
 ------------
 
   The implementation uses dropwizards fat jar creation which contains all the dependencies it needs to run.
+
 
 To compile.
 -----------
 
   mvn package
 
+
 To run, navigate to the app root directory (level containing the prime.yml)
 -----------
   
   java -jar target/primes-0.0.1-SNAPSHOT.jar server prime.yml
+
 
 Configuration
 -------------
@@ -106,9 +110,12 @@ Dependencies
     <version>2.2</version>
     <scope>test</scope>
   </dependency>
-	```
+```
 
 There is a limit on the range of values for the api of a min-max difference of 100,000,000
 
 One test is commented out test2ToMAX_VALUE() in DivideAndConquerTest as it fails on application start (takes too long).
 
+Tested on Windows, Mac OSX and Linux
+
+Any problems please do get in touch.
