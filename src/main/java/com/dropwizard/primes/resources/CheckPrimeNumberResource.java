@@ -1,6 +1,7 @@
 package com.dropwizard.primes.resources;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Max;
 import java.util.concurrent.atomic.AtomicLong;
 
 import javax.ws.rs.GET;
@@ -26,7 +27,7 @@ public class CheckPrimeNumberResource {
 
     @GET
     @Timed
-    public PrimeNumber isThisNumberPrime(@QueryParam("start")  @Min(1) int numberToCheck) {  
+    public PrimeNumber isThisNumberPrime(@QueryParam("start")  @Min(1) @Max(2147483646) int numberToCheck) {  
     	    	
     	PrimeNumber primer = new PrimeNumber(counter.incrementAndGet());
     	primer.setIsPrime(new CalculatePrimeNumbers().isPrimeNumber(numberToCheck));  
