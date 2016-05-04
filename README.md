@@ -19,22 +19,24 @@ Documentation
 ------------
 
   The implementation uses dropwizards fat jar creation which contains all the dependencies it needs to run.
+  
+  [WIKI](https://github.com/Jude-Conroy/PrimeNumberValidator/wiki)
 
 
 To compile.
------------
+
 
   mvn package
 
 
 To run, navigate to the app root directory (level containing the prime.yml)
------------
+
   
   java -jar target/primes-0.0.1-SNAPSHOT.jar server prime.yml
 
 
 Configuration
--------------
+
 
   The configuration is contained in the prime.yml file. When the app s running it is accessible on the applicationConnectors port below.
 
@@ -63,12 +65,12 @@ server:
 ```
 
 Tests
----------
+
 
 Tests are included and only test the prime number calculators and processes. I considered it out of scope to test the implementation of the framework.
 
 Dependencies
----------
+
 
 ```xml
 <properties>
