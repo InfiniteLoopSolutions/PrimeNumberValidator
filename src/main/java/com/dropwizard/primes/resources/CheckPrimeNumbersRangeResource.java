@@ -1,5 +1,6 @@
 package com.dropwizard.primes.resources;
 
+import javax.validation.constraints.Min;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -31,7 +32,7 @@ public class CheckPrimeNumbersRangeResource {
 
     @GET
     @Timed
-    public PrimeNumber isThisNumberPrime(@QueryParam("rangestart") int rangeStart, @QueryParam("rangeend") int rangeEnd) throws InterruptedException, ExecutionException, InvalidAlgorithmParameterException {        
+    public PrimeNumber isThisNumberPrime(@QueryParam("rangestart") @Min(0) int rangeStart, @QueryParam("rangeend") int rangeEnd) throws InterruptedException, ExecutionException, InvalidAlgorithmParameterException {        
             	    	
     	if(rangeEnd - rangeStart > rangesSpreadMax)
     		throw new InvalidAlgorithmParameterException(THE_RANGE_MUST_BE_LESS_THAN + rangesSpreadMax);
