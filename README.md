@@ -128,5 +128,9 @@ NOTES
     One test is commented out test2ToMAX_VALUE() in DivideAndConquerTest as it fails on application start (takes too long).
 
     Tested on Windows, Mac OSX and Linux
+    TODO -Inroduce step 2 and 4 to reduce numbers checked in loop
+    TODO -Custom Exception handling. If an excption is thrown then a http 500 error is sent from jersey needs to be improved.
+    
+    
 
 Any problems please do get in touch.
